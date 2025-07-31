@@ -1,0 +1,131 @@
+.page_name {
+  width: 180px;
+  line-height: 60px;
+  font-size: 16px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page_name:hover {
+  border-bottom: #0078d7 2px solid;
+}
+
+.page_name.selected_page {
+  border-bottom: #0078d7 10px solid;
+  background: linear-gradient(#ffffff00 0%, #0078d733 100%);
+  color: #0078d7;
+  font-size: 18px;
+  animation: highlight_page 0.3s ease-in;
+}
+
+.page_title {
+  color: inherit;
+  text-decoration: none;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_title_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_buffer {
+  width: 35px;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin: 20px 20px;
+}
+
+.logo {
+  width: 87px;
+  height: 50px;
+}
+
+.theme_button_container {
+  padding: 3px;
+  gap: 3px;
+  border-radius: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.theme_button_container:hover {
+  cursor: pointer;
+}
+
+.theme_button_container.dark {
+  border: #ffffff 3px solid;
+}
+
+.theme_button_container.light {
+  border: #000000 3px solid;
+}
+
+.theme_icon_moon,
+.theme_icon_sun {
+  width: 20px;
+  height: 20x;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.theme_icon_moon.dark {
+  background-color: #ffffff;
+  animation: moon_background 0.3s ease-in;
+}
+
+.theme_icon_sun.light {
+  background-color: #000000;
+  animation: sun_background 0.3s ease-in;
+}
+
+@keyframes highlight_page {
+  0% {
+    background: linear-gradient(#ffffff00 100%, #0078d700 100%);
+    color: inherit;
+  }
+  100% {
+    background: linear-gradient(#ffffff00 0%, #0078d733 100%);
+    color: #0078d7;
+  }
+}
+
+@keyframes moon_background {
+  0% {
+    background-color: #000000;
+    transform: translateX(33px);
+  }
+  50% {
+    height: 10px;
+    padding: 5px;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes sun_background {
+  0% {
+    background-color: #ffffff;
+    transform: translateX(-33px);
+  }
+  50% {
+    height: 10px;
+    padding: 5px;
+  }
+  100% {
+    background-color: #000000;
+  }
+}

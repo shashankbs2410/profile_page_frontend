@@ -1,0 +1,42 @@
+.pdf_document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pdf_window {
+  width: 95%;
+  height: 90%;
+  overflow: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.pdf_window::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.pdf_window::-webkit-scrollbar-track {
+  background-color: #ffffff33;
+  border-radius: 5px;
+  margin: 10px 10px;
+}
+
+.pdf_window::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pdf_window::-webkit-scrollbar-corner {
+  overflow: hidden;
+}
+
+.pdf_window.dark::-webkit-scrollbar-thumb {
+  background-color: #0078d7;
+}
+
+.pdf_window.light::-webkit-scrollbar-thumb {
+  background-color: #0e233066;
+}

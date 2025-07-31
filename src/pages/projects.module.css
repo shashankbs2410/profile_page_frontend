@@ -1,0 +1,15 @@
+.projects_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 140px);
+  padding: 20px;
+}
+
+.projects_description{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

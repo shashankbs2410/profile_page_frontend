@@ -1,0 +1,76 @@
+.pdf_container {
+  width: 60%;
+  height: 100%;
+  background-color: #111112;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  outline: 1px solid #d9d9d9;
+  outline-offset: -5px;
+  padding: 5px;
+}
+
+.pdf_buttons {
+  position: sticky;
+  width: 50%;
+  height: 32px;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 16px;
+  margin: 10px;
+  gap: 5px;
+}
+
+.page_change_button,
+.zoom_in_out_button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.page_change_button:hover,
+.zoom_in_out_button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button_img {
+  height: 16px;
+  width: 16px;
+}
+
+.zoom_percentage {
+  width: 50px;
+  text-align: center;
+}
+
+.print_download_icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.print_download_icons a {
+  height: 24px;
+}
+
+.pdf_header {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+}
+
+.buffer {
+  width: 68px;
+}

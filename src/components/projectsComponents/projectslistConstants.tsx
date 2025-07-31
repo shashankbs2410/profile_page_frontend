@@ -1,0 +1,16 @@
+export const projects = [
+  { title: "project1" },
+  { title: "project2" },
+  { title: "project3" },
+  { title: "project4" },
+  { title: "project5" },
+  { title: "project6" },
+  { title: "project7" },
+  { title: "project8" },
+  { title: "project9" },
+  { title: "project10" },
+  { title: "project11" },
+  { title: "project12" },
+  { title: "project13" },
+  { title: "project14" },
+];

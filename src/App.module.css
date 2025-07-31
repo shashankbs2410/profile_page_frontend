@@ -1,0 +1,82 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.app.dark {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Source Code Pro", monospace;
+}
+
+.app.light {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-family: "Source Code Pro", monospace;
+}
+
+.text {
+  color: #fff;
+}
+
+.background1,
+.background2,
+.background3 {
+  position: absolute;
+  z-index: -1;
+}
+
+.background1 {
+  left: 0;
+  top: 0;
+  animation: bg1_animation 15s ease-in-out infinite;
+}
+
+.background2 {
+  right: 0;
+  bottom: 0;
+  animation: bg2_animation 20s ease-in-out infinite;
+}
+
+.background3 {
+  right: 0;
+  bottom: 0;
+  animation: bg3_animation 12s ease-in-out infinite;
+}
+
+@keyframes bg1_animation {
+  0% {
+    left: -360px;
+  }
+  50% {
+    left: 0px;
+  }
+  100% {
+    left: -360px;
+  }
+}
+
+@keyframes bg2_animation {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: -730px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes bg3_animation {
+  0% {
+    bottom: -410px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -410px;
+  }
+}

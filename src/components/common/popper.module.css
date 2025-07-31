@@ -1,0 +1,59 @@
+.popper_container {
+  position: absolute;
+  right: -300px;
+  top: 100px;
+  height: 100px;
+  width: 300px;
+  border-radius: 5px;
+  animation: popper_position 4s ease-in;
+}
+
+.popper_text {
+  height: 70px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-overflow: ellipsis;
+}
+
+.timeout_bar {
+  background-color: #ffffff;
+  height: 5px;
+  border-radius: 5px;
+  width: calc(0% - 6px);
+  margin: 3px;
+  position: absolute;
+  bottom: 0px;
+  animation: timeout_barwidth 4s linear;
+}
+
+@keyframes popper_position {
+  0% {
+    right: -300px;
+  }
+  10% {
+    right: 20px;
+  }
+  90% {
+    right: 20px;
+  }
+  100% {
+    right: -300px;
+  }
+}
+
+@keyframes timeout_barwidth {
+  0% {
+    width: calc(100% - 6px);
+  }
+  10% {
+    width: calc(100% - 6px);
+  }
+  90% {
+    width: calc(0% - 6px);
+  }
+  100% {
+    width: calc(0% - 6px);
+  }
+}
