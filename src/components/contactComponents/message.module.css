@@ -21,7 +21,7 @@
 
 .message_box.dark,
 .reset_button.dark {
-  background-color: #111112;
+  background-color: transparent;
   color: #ffffff;
 }
 

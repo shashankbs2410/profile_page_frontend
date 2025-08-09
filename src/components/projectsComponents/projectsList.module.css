@@ -19,10 +19,10 @@
 }
 
 .projects_list_box.dark {
-  background-color: #111112;
+  background-color: transparent;
   color: #ffffff;
   outline: #d9d9d9 solid 1px;
-  outline-offset: -5px;
+  /* outline-offset: -5px; */
 }
 
 .projects_list_box.light {
