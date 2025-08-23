@@ -48,6 +48,7 @@ const Projectslist = () => {
             .fill(null)
             .map((_, index) => (
               <div
+                key={`page-${index}`}
                 className={`${classes.page_dot} ${
                   selectedPage === index + 1 ? classes.selected : undefined
                 }`}
