@@ -8,9 +8,10 @@ export const postMessage = createAsyncThunk(
   "postMessage",
   async (payload: Message) => {
     let isSent: boolean;
+    console.log(import.meta.env.VITE_MESSAGE_KEY);
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyCVBKXCRYLskIJF_WaH5jAJ4zBIwNJF3dpbu_umEEc1CSuorUuq-3nAxr-SOFZ440/exec",
+        `https://script.google.com/macros/s/${import.meta.env.VITE_MESSAGE_KEY}/exec`,
         {
           method: "POST",
           headers: {

@@ -17,7 +17,7 @@ const Navigator = () => {
       <div className={classes.header_buffer}></div>
       <div className={classes.page_title_container}>
         {pages.map((page) => (
-          <Link to={page.path} className={classes.page_title}>
+          <Link key={page.page} to={page.path} className={classes.page_title}>
             <span
               className={`${classes.page_name} ${
                 page.page === pageName && classes.selected_page
