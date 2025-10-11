@@ -28,7 +28,9 @@ const Projectslist = () => {
               .slice((selectedPage - 1) * 4, selectedPage * 4)
               .map((project) => (
                 <div key={project.title} className={classes.project_box}>
-                  <img className={classes.open_link} src={redirectIcon} />
+                  <a href={project.link} target="_blank">
+                    <img className={classes.open_link} src={redirectIcon} />
+                  </a>
                   {project.title}
                 </div>
               ))}

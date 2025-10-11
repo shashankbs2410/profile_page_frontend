@@ -14,7 +14,7 @@ const ResumePage = () => {
 
   return (
     <div className={classes.resume_container}>
-      <PdfBox src="/src/assets/Shashank_Resume.pdf" />
+      <PdfBox src="/src/assets/Resume_Shashank.pdf" />
     </div>
   );
 };

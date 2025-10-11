@@ -1,16 +1,25 @@
-export const projects = [
-  { title: "project1" },
-  { title: "project2" },
-  { title: "project3" },
-  { title: "project4" },
-  { title: "project5" },
-  { title: "project6" },
-  { title: "project7" },
-  { title: "project8" },
-  { title: "project9" },
-  { title: "project10" },
-  { title: "project11" },
-  { title: "project12" },
-  { title: "project13" },
-  { title: "project14" },
+export const projects: {
+  title: string;
+  description: string;
+  link: string;
+  techStack: string;
+}[] = [
+  {
+    title: "Shopping App",
+    description: "",
+    link: "https://github.com/shashankbs2410/Shopping_App",
+    techStack: "",
+  },
+  {
+    title: "Url Shortner",
+    description: "",
+    link: "https://github.com/shashankbs2410/Url_Shortner",
+    techStack: "",
+  },
+  {
+    title: "Todo App",
+    description: "",
+    link: "https://github.com/shashankbs2410/Todo_App",
+    techStack: "",
+  },
 ];
