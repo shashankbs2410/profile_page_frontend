@@ -55,6 +55,7 @@ const ContactLinks = () => {
             className={`${classes.link_icon} ${classes[mode]}`}
             href={link.link}
             target="_blank"
+            key={link.name}
           >
             <img
               title={link.name}
