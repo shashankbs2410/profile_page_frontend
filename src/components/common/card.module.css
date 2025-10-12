@@ -1,0 +1,19 @@
+.box {
+  position: relative;
+  width: calc(47.5% - 20px);
+  height: calc(47.5% - 20px);
+  border-radius: 10px;
+  background-color: #242424;
+  box-shadow: 5px 5px 5px 5px #00000040;
+  padding: 10px;
+}
+
+.open_link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.open_link:hover {
+  cursor: pointer;
+}

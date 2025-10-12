@@ -5,7 +5,7 @@ import classes from "./projectsList.module.css";
 import leftArrow from "../../assets/icon_left_arrow.png";
 import rightArrow from "../../assets/icon_right_arrow.png";
 import { projects } from "./projectslistConstants";
-import redirectIcon from "../../assets/icon_redirect.png";
+import CardComponent from "../common/card";
 
 const Projectslist = () => {
   const { mode } = useSelector((state: RootState) => state.container);
@@ -27,12 +27,7 @@ const Projectslist = () => {
             {projects
               .slice((selectedPage - 1) * 4, selectedPage * 4)
               .map((project) => (
-                <div key={project.title} className={classes.project_box}>
-                  <a href={project.link} target="_blank">
-                    <img className={classes.open_link} src={redirectIcon} />
-                  </a>
-                  {project.title}
-                </div>
+                <CardComponent {...project} />
               ))}
           </div>
           <div className={classes.buffer}>
