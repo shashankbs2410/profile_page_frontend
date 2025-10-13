@@ -1,4 +1,4 @@
-import classes from "./chip.module.css";
+import classes from "../../styles/componentStyles/common/chip.module.css";
 
 const ChipComponent = (props: { text: string; color: string }) => {
   return (

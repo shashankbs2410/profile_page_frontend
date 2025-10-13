@@ -1,6 +1,6 @@
 import ChipComponent from "./chip";
 import redirectIcon from "../../assets/icon_redirect.png";
-import classes from "./card.module.css";
+import classes from "../../styles/componentStyles/common/card.module.css";
 
 export type CardDetailstype = {
   title: string;
@@ -15,12 +15,12 @@ const CardComponent = (props: CardDetailstype) => {
       <a href={props.link} target="_blank">
         <img className={classes.open_link} src={redirectIcon} />
       </a>
-      <div>{props.title}</div>
-      <div>{props.description}</div>
+      <div className={classes.title}>{props.title}</div>
+      <div className={classes.description}>{props.description}</div>
       {props.chips && (
         <div style={{ display: "flex" }}>
           {props.chips.map((chip) => (
-            <ChipComponent text={chip} color="#000" />
+            <ChipComponent text={chip} color="#242424" />
           ))}
         </div>
       )}

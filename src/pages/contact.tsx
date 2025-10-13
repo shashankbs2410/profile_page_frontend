@@ -4,7 +4,7 @@ import { PAGE_NAMES } from "../appConstants";
 import { setPageName } from "../store/slices/containerSlice";
 import ContactLinks from "../components/contactComponents/contactLinks";
 import MessageComponent from "../components/contactComponents/message";
-import classes from "./contact.module.css";
+import classes from "../styles/pageStyles/contact.module.css";
 
 const ContactPage = () => {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { PAGE_NAMES } from "../appConstants";
 import { setPageName } from "../store/slices/containerSlice";
-import classes from "./resume.module.css";
+import classes from "../styles/pageStyles/resume.module.css";
 import PdfBox from "../components/resumeComponents/pdfBox";
 
 const ResumePage = () => {

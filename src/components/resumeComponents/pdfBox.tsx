@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import classes from "./pdfBox.module.css";
+import classes from "../../styles/componentStyles/resumeComponents/pdfBox.module.css";
 import PdfReact from "./pdfViewer";
 import leftSmallIcon from "../../assets/icon_small_left.png";
 import rightSmallIcon from "../../assets/icon_small_right.png";

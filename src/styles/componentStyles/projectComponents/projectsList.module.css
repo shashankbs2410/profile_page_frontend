@@ -19,7 +19,8 @@
 }
 
 .projects_list_box.dark {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgb(36, 36, 36, 0.5);
   color: #ffffff;
   outline: #d9d9d9 solid 1px;
   /* outline-offset: -5px; */

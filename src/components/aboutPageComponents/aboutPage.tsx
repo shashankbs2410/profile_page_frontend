@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import classes from "./aboutepage.module.css";
+import classes from "../../styles/componentStyles/aboutPageComponents/aboutepage.module.css";
 import profilePhoto from "../../assets/photo.png";
 import BlurText from "../common/blurText";
 
@@ -53,11 +53,7 @@ const AboutPageContainer: React.FC = () => {
           onMouseMove={mouseMoveHandler}
           onMouseOut={mouseOutHandler}
         >
-          <div
-            className={classes.photo}
-            // onMouseOver={mouseOverHandler}
-            // onMouseOut={mouseOutHandler}
-          >
+          <div className={classes.photo}>
             <img
               src={profilePhoto}
               style={{ width: "290px", borderRadius: "10px" }}

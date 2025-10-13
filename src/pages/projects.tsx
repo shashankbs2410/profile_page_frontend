@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { PAGE_NAMES } from "../appConstants";
 import { setPageName } from "../store/slices/containerSlice";
 import Projectslist from "../components/projectsComponents/projectsList";
-import classes from "./projects.module.css";
+import classes from "../styles/pageStyles/projects.module.css";
 
 const ProjectsPage = () => {
   const dispatch = useDispatch();

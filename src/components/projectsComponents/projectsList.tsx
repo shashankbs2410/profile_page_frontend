@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
-import classes from "./projectsList.module.css";
+import classes from "../../styles/componentStyles/projectComponents/projectsList.module.css";
 import leftArrow from "../../assets/icon_left_arrow.png";
 import rightArrow from "../../assets/icon_right_arrow.png";
 import { projects } from "./projectslistConstants";

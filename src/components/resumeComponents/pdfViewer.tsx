@@ -1,5 +1,5 @@
 import { Document, Page } from "react-pdf";
-import classes from "./pdfViewer.module.css";
+import classes from "../../styles/componentStyles/resumeComponents/pdfViewer.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { RefObject } from "react";
