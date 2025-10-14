@@ -1,5 +1,11 @@
+.container_title{
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .projects_list_container {
-  width: 70%;
+  width: 65%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -7,27 +13,20 @@
 }
 
 .projects_list_box {
-  width: calc(85% - 40px);
-  height: calc(90% - 40px);
+  width: calc(95% - 40px);
+  height: calc(100% - 40px);
   padding: 20px;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 5px 5px 5px 5px #00000066;
 }
 
 .projects_list_box.dark {
-  /* background-color: transparent; */
-  background-color: rgb(36, 36, 36, 0.5);
   color: #ffffff;
-  outline: #d9d9d9 solid 1px;
-  /* outline-offset: -5px; */
 }
 
 .projects_list_box.light {
-  background-color: #0e233033;
   color: #000000;
 }
 

@@ -1,7 +1,7 @@
 import { Document, Page } from "react-pdf";
 import classes from "../../styles/componentStyles/resumeComponents/pdfViewer.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { AppDispatch, RootState } from "../../store";
 import { RefObject } from "react";
 import { setPageNumber } from "../../store/slices/resumeSlice";
 
@@ -18,7 +18,7 @@ const PdfReact = (props: PdfProps) => {
   const { numPages, pageNumber } = useSelector(
     (state: RootState) => state.resume
   );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handlePageScroll = () => {
     if (pageRef?.current) {

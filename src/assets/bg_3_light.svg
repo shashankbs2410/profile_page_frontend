@@ -1,0 +1,10 @@
+<svg width="911" height="408" viewBox="0 0 911 408" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path fill="url(#pattern)" d="M911 0.248047V333.528L746.297 407.224H0L910.117 0L911 0.248047Z" />
+    <defs>
+        <pattern id="pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="2" fill="#FFFFFF">
+            </circle>
+        </pattern>
+    </defs>
+</svg>

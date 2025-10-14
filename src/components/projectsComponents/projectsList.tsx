@@ -4,18 +4,19 @@ import { RootState } from "../../store";
 import classes from "../../styles/componentStyles/projectComponents/projectsList.module.css";
 import leftArrow from "../../assets/icon_left_arrow.png";
 import rightArrow from "../../assets/icon_right_arrow.png";
-import { projects } from "./projectslistConstants";
 import CardComponent from "../common/card";
 
 const Projectslist = () => {
   const { mode } = useSelector((state: RootState) => state.container);
+  const { projectsList } = useSelector((state: RootState) => state.projects);
   const [selectedPage, setSelectedPage] = useState(1);
   return (
     <div className={classes.projects_list_container}>
       <div className={`${classes.projects_list_box} ${classes[mode]}`}>
+        <div className={classes.container_title}>Projects</div>
         <div className={classes.projects_viewer}>
           <div className={classes.buffer}>
-            {selectedPage !== 1 && (
+            {projectsList.length > 0 && selectedPage !== 1 && (
               <img
                 src={leftArrow}
                 className={classes.arrow}
@@ -24,24 +25,26 @@ const Projectslist = () => {
             )}
           </div>
           <div className={classes.projects_box}>
-            {projects
-              .slice((selectedPage - 1) * 4, selectedPage * 4)
-              .map((project) => (
-                <CardComponent {...project} />
-              ))}
+            {projectsList.length > 0 &&
+              projectsList
+                .slice((selectedPage - 1) * 4, selectedPage * 4)
+                .map((project) => (
+                  <CardComponent key={project.title} {...project} />
+                ))}
           </div>
           <div className={classes.buffer}>
-            {selectedPage !== Math.ceil(projects.length / 4) && (
-              <img
-                src={rightArrow}
-                className={classes.arrow}
-                onClick={() => setSelectedPage(selectedPage + 1)}
-              />
-            )}
+            {projectsList.length > 0 &&
+              selectedPage !== Math.ceil(projectsList.length / 4) && (
+                <img
+                  src={rightArrow}
+                  className={classes.arrow}
+                  onClick={() => setSelectedPage(selectedPage + 1)}
+                />
+              )}
           </div>
         </div>
         <div className={classes.page_dots}>
-          {Array(Math.ceil(projects.length / 4))
+          {Array(Math.ceil(projectsList.length / 4))
             .fill(null)
             .map((_, index) => (
               <div

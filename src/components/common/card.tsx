@@ -18,9 +18,9 @@ const CardComponent = (props: CardDetailstype) => {
       <div className={classes.title}>{props.title}</div>
       <div className={classes.description}>{props.description}</div>
       {props.chips && (
-        <div style={{ display: "flex" }}>
+        <div className={classes.chips_container}>
           {props.chips.map((chip) => (
-            <ChipComponent text={chip} color="#242424" />
+            <ChipComponent key={chip} text={chip} color="#242424" />
           ))}
         </div>
       )}

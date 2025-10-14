@@ -8,7 +8,7 @@ import minusIcon from "../../assets/icon_minus.png";
 import printIcon from "../../assets/icon_print.png";
 import downloadIcon from "../../assets/icon_download.png";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { AppDispatch, RootState } from "../../store";
 import { setNumPages, setPageNumber } from "../../store/slices/resumeSlice";
 
 const PdfBox = (props: { src: string }) => {
@@ -17,7 +17,7 @@ const PdfBox = (props: { src: string }) => {
   const { pageNumber, numPages } = useSelector(
     (state: RootState) => state.resume
   );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   function nextPage() {
     if (pageRef.current) {

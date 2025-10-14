@@ -6,10 +6,23 @@
   padding: 20px;
 }
 
-.projects_description{
+.projects_description {
   width: 30%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.divider {
+  width: 1px;
+  height: 75%;
+}
+
+.divider.dark {
+  background-color: #ffffff;
+}
+
+.divider.light {
+  background-color: #000000;
 }

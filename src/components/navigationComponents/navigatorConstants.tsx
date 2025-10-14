@@ -8,8 +8,8 @@ export const pages: { page: string; path: string }[] = [
     path: "resume",
   },
   {
-    page: "Projects",
-    path: "projects",
+    page: "Portfolio",
+    path: "portfolio",
   },
   {
     page: "Cotact",
