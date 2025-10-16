@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+}
+
+.title {
+  font-family: inherit !important;
+}
+
+.time {
+  font-family: inherit !important;
+  font-size: 12px !important;
+}
+
+.sub_title {
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  color: #949494;
+}

@@ -25,7 +25,7 @@ function App() {
         { element: <Navigate to="about" />, index: true },
         { path: "about", element: <AboutPage /> },
         { path: "resume", element: <ResumePage /> },
-        { path: "portfolio", element: <ProjectsPage /> },
+        { path: "projects", element: <ProjectsPage /> },
         { path: "contact", element: <ContactPage /> },
       ],
     },

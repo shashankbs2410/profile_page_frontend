@@ -1,5 +1,5 @@
 .pdf_container {
-  width: 60%;
+  width: 70%;
   height: 100%;
   background-color: transparent;
   display: flex;
@@ -71,6 +71,15 @@
   padding: 0px 20px;
 }
 
-.buffer {
+.back {
   width: 68px;
+  display: flex;
+}
+
+.back_button {
+  all: unset;
+}
+
+.back_button:hover {
+  cursor: pointer;
 }

@@ -13,7 +13,7 @@ const Projectslist = () => {
   return (
     <div className={classes.projects_list_container}>
       <div className={`${classes.projects_list_box} ${classes[mode]}`}>
-        <div className={classes.container_title}>Projects</div>
+        {/* <div className={classes.container_title}>Projects</div> */}
         <div className={classes.projects_viewer}>
           <div className={classes.buffer}>
             {projectsList.length > 0 && selectedPage !== 1 && (

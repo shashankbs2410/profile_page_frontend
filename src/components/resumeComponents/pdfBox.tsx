@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
 import { setNumPages, setPageNumber } from "../../store/slices/resumeSlice";
 
-const PdfBox = (props: { src: string }) => {
+const PdfBox = (props: { src: string; backClickHandler: any }) => {
   const pageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState<number>(1);
   const { pageNumber, numPages } = useSelector(
@@ -46,7 +46,14 @@ const PdfBox = (props: { src: string }) => {
   return (
     <div className={classes.pdf_container}>
       <div className={classes.pdf_header}>
-        <div className={classes.buffer} />
+        <div className={classes.back}>
+          <button
+            className={classes.back_button}
+            onClick={props.backClickHandler}
+          >
+            {"< Back"}
+          </button>
+        </div>
         <div className={classes.pdf_buttons}>
           <button
             onClick={prevPage}
