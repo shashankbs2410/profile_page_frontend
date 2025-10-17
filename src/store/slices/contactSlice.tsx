@@ -7,29 +7,22 @@ import {
 export const postMessage = createAsyncThunk(
   "postMessage",
   async (payload: Message) => {
-    let isSent: boolean;
-    console.log(import.meta.env.VITE_MESSAGE_KEY);
     try {
-      const response = await fetch(
-        `https://script.google.com/macros/s/${import.meta.env.VITE_MESSAGE_KEY}/exec`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams(payload).toString(),
-        }
-      );
-
-      const logData = await response.text();
-      console.log(logData);
-      isSent = true;
+      return fetch(`https://profile-page-backend-neon.vercel.app/contact-message`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then((res) => res.json())
+        .then((val: { writeStatus: string }) => {
+          return val.writeStatus === "Success";
+        });
     } catch (error: any) {
       console.error("Error: ", error);
-      isSent = false;
+      return false;
     }
-
-    return isSent;
   }
 );
 

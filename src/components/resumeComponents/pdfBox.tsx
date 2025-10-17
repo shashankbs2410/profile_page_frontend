@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import classes from "./pdfBox.module.css";
+import classes from "../../styles/componentStyles/resumeComponents/pdfBox.module.css";
 import PdfReact from "./pdfViewer";
 import leftSmallIcon from "../../assets/icon_small_left.png";
 import rightSmallIcon from "../../assets/icon_small_right.png";
@@ -8,16 +8,16 @@ import minusIcon from "../../assets/icon_minus.png";
 import printIcon from "../../assets/icon_print.png";
 import downloadIcon from "../../assets/icon_download.png";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { AppDispatch, RootState } from "../../store";
 import { setNumPages, setPageNumber } from "../../store/slices/resumeSlice";
 
-const PdfBox = (props: { src: string }) => {
+const PdfBox = (props: { src: string; backClickHandler: any }) => {
   const pageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState<number>(1);
   const { pageNumber, numPages } = useSelector(
     (state: RootState) => state.resume
   );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   function nextPage() {
     if (pageRef.current) {
@@ -46,7 +46,14 @@ const PdfBox = (props: { src: string }) => {
   return (
     <div className={classes.pdf_container}>
       <div className={classes.pdf_header}>
-        <div className={classes.buffer} />
+        <div className={classes.back}>
+          <button
+            className={classes.back_button}
+            onClick={props.backClickHandler}
+          >
+            {"< Back"}
+          </button>
+        </div>
         <div className={classes.pdf_buttons}>
           <button
             onClick={prevPage}

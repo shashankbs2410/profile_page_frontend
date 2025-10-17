@@ -6,7 +6,7 @@ import { RootState } from "../../store";
 import mailIcon from "../../assets/icon_mail.png";
 import copyIcon from "../../assets/icon_copy.png";
 import tickIcon from "../../assets/icon_tick.png";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ContactLinks = () => {
   const { mode } = useSelector((state: RootState) => state.container);
@@ -55,6 +55,7 @@ const ContactLinks = () => {
             className={`${classes.link_icon} ${classes[mode]}`}
             href={link.link}
             target="_blank"
+            key={link.name}
           >
             <img
               title={link.name}
@@ -69,4 +70,4 @@ const ContactLinks = () => {
   );
 };
 
-export default ContactLinks;
+export default React.memo(ContactLinks);

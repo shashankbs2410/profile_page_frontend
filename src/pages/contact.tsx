@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { PAGE_NAMES } from "../appConstants";
 import { setPageName } from "../store/slices/containerSlice";
 import ContactLinks from "../components/contactComponents/contactLinks";
 import MessageComponent from "../components/contactComponents/message";
-import classes from "./contact.module.css";
+import classes from "../styles/pageStyles/contact.module.css";
+import { AppDispatch } from "../store";
 
 const ContactPage = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(setPageName(PAGE_NAMES.CONTACT_PAGE));
@@ -21,4 +22,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default React.memo(ContactPage);

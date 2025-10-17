@@ -5,10 +5,10 @@ import classes from "./navigator.module.css";
 import moon from "../../assets/icon_moon_black.png";
 import sun from "../../assets/icon_sun_white.png";
 import { setMode } from "../../store/slices/containerSlice";
-import { RootState } from "../../store";
+import { AppDispatch, RootState } from "../../store";
 
 const Navigator = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const { mode, pageName } = useSelector((state: RootState) => state.container);
 

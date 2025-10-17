@@ -87,6 +87,13 @@
   opacity: 0.8;
 }
 
+.send_button_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 .message_buttons {
   display: flex;
   justify-content: flex-end;
@@ -165,39 +172,7 @@
   pointer-events: none;
 }
 
-.sending_animation {
-  height: 12px;
-  border-radius: 8px;
-  border: 2px solid #ffffff;
-  animation: sending 3s infinite ease-in-out;
-}
-
 .super_script {
   vertical-align: super;
   font-size: 10px;
-}
-
-@keyframes sending {
-  0%,
-  10% {
-    transform: translateX(-48px);
-    width: 12px;
-  }
-  30% {
-    transform: translateX(0px);
-    width: 96px;
-  }
-  50%,
-  60% {
-    transform: translateX(48px);
-    width: 12px;
-  }
-  80% {
-    transform: translateX(0px);
-    width: 96px;
-  }
-  100% {
-    transform: translateX(-48px);
-    width: 12px;
-  }
 }

@@ -15,6 +15,7 @@ import {
 import PopperComponent from "../common/popper";
 import { useEffect, useState } from "react";
 import { failedMessage, successMessage } from "./messageConstants";
+import LoaderComponent from "../common/loader";
 
 const MessageComponent = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -114,9 +115,13 @@ const MessageComponent = () => {
               dispatch(resetMassage());
             }}
           >
-            {!sending && <span>Send</span>}
-            {!sending && <img src={sendIcon} />}
-            {sending && <div className={classes.sending_animation} />}
+            {!sending && (
+              <span className={classes.send_button_content}>
+                <span>Send</span>
+                <img src={sendIcon} />
+              </span>
+            )}
+            {sending && <LoaderComponent />}
           </button>
         </div>
       </div>

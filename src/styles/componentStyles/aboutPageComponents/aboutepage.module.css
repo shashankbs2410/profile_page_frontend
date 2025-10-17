@@ -1,0 +1,109 @@
+.about_page_container {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@property --gradient-color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #c0c0c01a;
+}
+
+.photo_card_container {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px 0px var(--gradient-color-3);
+  background: #1a1a1a55;
+}
+
+.photo_card_container:hover {
+  background: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 10px
+    ),
+    repeating-linear-gradient(#1a1a1a55, #1a1a1a);
+}
+
+@keyframes box-shadow-pulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px var(--gradient-color-3);
+  }
+  100% {
+    box-shadow: 0px 0px 25px 20px var(--gradient-color-3);
+  }
+}
+
+@property --gradient-color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #000000;
+}
+
+@property --gradient-color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #80808080;
+}
+
+@keyframes gradient-change {
+  0% {
+    --gradient-color-1: #000000;
+    --gradient-color-2: #80808080;
+  }
+  50% {
+    --gradient-color-1: #80808080;
+    --gradient-color-2: #000000;
+  }
+  100% {
+    --gradient-color-1: #000000;
+    --gradient-color-2: #80808080;
+  }
+}
+
+.photo_card {
+  outline: #d9d9d9 1px solid;
+  outline-offset: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  border-radius: 20px;
+  transform: perspective(400px) rotateX(0deg) rotateY(10deg) scale(1.00) translate3d(0, 0, 0);
+}
+
+.photo {
+  width: 300px;
+  height: 390px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about_me {
+  width: 45%;
+  margin-left: 80px;
+}
+
+.about_me_heading {
+  font-size: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.about_me_text {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
