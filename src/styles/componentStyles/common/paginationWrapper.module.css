@@ -1,0 +1,67 @@
+.buffer {
+  width: 24px;
+}
+
+.arrow:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.content_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2.5%;
+  height: 100%;
+  width: 100%;
+}
+
+.page_dots {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.page_dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff33;
+}
+
+.page_dot.selected {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+
+.items_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+
+.list_box {
+  width: calc(95% - 40px);
+  height: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list_box.dark {
+  color: #ffffff;
+}
+
+.list_box.light {
+  color: #000000;
+}

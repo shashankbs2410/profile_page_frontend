@@ -33,12 +33,16 @@ const TimeLineComponent = (props: { data: timeLineData[] }) => {
             {item.time}
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot />
-            {i !== props.data.length - 1 && <TimelineConnector />}
+            <TimelineDot className={classes.dot} />
+            {i !== props.data.length - 1 && (
+              <TimelineConnector className={classes.line} />
+            )}
           </TimelineSeparator>
           <TimelineContent className={classes.title}>
             <div>{item.title}</div>
-            <div className={classes.sub_title}>{item.subTitle}</div>
+            {item.subTitle && (
+              <div className={classes.sub_title}>{item.subTitle}</div>
+            )}
             <div className={classes.description}>{item.description}</div>
           </TimelineContent>
         </TimelineItem>

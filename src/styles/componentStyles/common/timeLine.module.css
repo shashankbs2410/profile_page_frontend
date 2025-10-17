@@ -19,3 +19,11 @@
   font-size: 14px;
   color: #949494;
 }
+
+.line {
+  background-color: #949494 !important;
+}
+
+.dot {
+  background-color: #0078d7 !important;
+}

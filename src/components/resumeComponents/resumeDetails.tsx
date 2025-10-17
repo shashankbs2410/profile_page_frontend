@@ -3,7 +3,9 @@ import classes from "../../styles/componentStyles/resumeComponents/resumedetails
 import { RootState } from "../../store";
 import pdfImage from "../../assets/icon_pdf.png";
 import TimeLineComponent from "../common/timeLine";
-import { careerData } from "./resumeDetailsConstants";
+import { careerData, skills } from "./resumeDetailsConstants";
+import PaginationComponent from "../common/paginationWrapper";
+import SkillCardComponent from "../common/skillCard";
 
 const ResumeDetailsComponent = (props: { pdfViewOpenFunction: any }) => {
   const { mode } = useSelector((state: RootState) => state.container);
@@ -15,7 +17,16 @@ const ResumeDetailsComponent = (props: { pdfViewOpenFunction: any }) => {
       </div>
       <div className={classes.divider} />
       <div className={classes.right_section}>
-        <div className={classes.tech_stack}>Technical Skills</div>
+        <div className={classes.tech_stack}>
+          <span className={classes.ts_title}>TECHNICAL SKILLS</span>
+          <div className={classes.ts_container}>
+            <PaginationComponent
+              data={skills}
+              itemcount={6}
+              mapComponent={SkillCardComponent}
+            />
+          </div>
+        </div>
         <button
           className={`${classes.pdf_open_button} ${classes[mode]}`}
           onClick={props.pdfViewOpenFunction}
