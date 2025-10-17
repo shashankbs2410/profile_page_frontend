@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import leftArrow from "../../assets/icon_left_arrow.png";
 import rightArrow from "../../assets/icon_right_arrow.png";
 import classes from "../../styles/componentStyles/common/paginationWrapper.module.css";
