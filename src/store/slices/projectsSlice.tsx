@@ -5,7 +5,7 @@ export const fetchProjects = createAsyncThunk(
   "data/fetchData",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch(`http://localhost:8080/projects`);
+      const response = await fetch(`https://profile-page-backend-neon.vercel.app/projects`);
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }

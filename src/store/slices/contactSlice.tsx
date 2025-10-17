@@ -8,7 +8,7 @@ export const postMessage = createAsyncThunk(
   "postMessage",
   async (payload: Message) => {
     try {
-      return fetch(`http://localhost:8080/contact-message`, {
+      return fetch(`https://profile-page-backend-neon.vercel.app/contact-message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
