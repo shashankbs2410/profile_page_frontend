@@ -2,9 +2,12 @@ import React, { useCallback, useEffect, useRef } from "react";
 import classes from "../../styles/componentStyles/aboutPageComponents/aboutepage.module.css";
 import profilePhoto from "../../assets/photo.png";
 import BlurText from "../common/blurText";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 const AboutPageContainer: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const {mode} = useSelector((state: RootState) => state.container);
 
   useEffect(() => {
     const element = cardRef.current;
@@ -42,7 +45,7 @@ const AboutPageContainer: React.FC = () => {
 
   return (
     <div className={classes.about_page_container}>
-      <div className={classes.photo_card_container}>
+      <div className={`${classes.photo_card_container} ${classes[mode]}`}>
         <div ref={cardRef} className={classes.photo_card}>
           <div className={classes.photo}>
             <img

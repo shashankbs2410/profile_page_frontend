@@ -20,7 +20,16 @@
   background: #1a1a1a55;
 }
 
-.photo_card_container:hover {
+.photo_card_container.light:hover {
+  background: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #FFFFFF80 10px
+    ),
+    repeating-linear-gradient(#FFFFFF80, transparent);
+}
+
+.photo_card_container.dark:hover {
   background: repeating-radial-gradient(
       circle at 0 0,
       transparent 0,

@@ -6,7 +6,7 @@
   background-color: #000000;
   box-shadow: 2px 2px 2px 2px #00000040;
   padding: 15px;
-  outline: 1px solid rgb(255, 255, 255, 0.5);
+  outline: 1px solid rgb(255, 255, 255);
   outline-offset: -5px;
 }
 
@@ -22,14 +22,14 @@
 
 .title {
   font-weight: bold;
-  color: #949494;
+  color: #fff;
 }
 
 .description {
   font-size: 12px;
   margin-top: 5px;
   height: 50%;
-  color: #848484;
+  color: #949494;
 }
 
 .chips_container {
