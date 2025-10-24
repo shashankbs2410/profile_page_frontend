@@ -7,7 +7,7 @@ import { RootState } from "../../store";
 
 const AboutPageContainer: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const {mode} = useSelector((state: RootState) => state.container);
+  const { mode } = useSelector((state: RootState) => state.container);
 
   useEffect(() => {
     const element = cardRef.current;
@@ -46,7 +46,7 @@ const AboutPageContainer: React.FC = () => {
   return (
     <div className={classes.about_page_container}>
       <div className={`${classes.photo_card_container} ${classes[mode]}`}>
-        <div ref={cardRef} className={classes.photo_card}>
+        <div ref={cardRef} className={`${classes.photo_card} ${classes[mode]}`}>
           <div className={classes.photo}>
             <img
               src={profilePhoto}

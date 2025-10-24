@@ -30,14 +30,29 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
+}
+
+.page_dot.dark {
   background-color: #ffffff33;
+}
+
+.page_dot.light {
+  background-color: #00000033;
 }
 
 .page_dot.selected {
   width: 14px;
   height: 14px;
   border-radius: 7px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
+}
+
+.page_dot.selected.light {
+  background-color: #000000;
+}
+
+.page_dot.selected.dark {
+  background-color: #FFFFFF;
 }
 
 .items_container {

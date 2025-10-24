@@ -1,8 +1,6 @@
 .container {
   width: 33%;
   height: 47.5%;
-  background-color: #000000;
-  outline: 1px solid #ffffff;
   outline-offset: -5px;
   border-radius: 10px;
   display: flex;
@@ -11,12 +9,26 @@
   align-items: center;
 }
 
+.container.light {
+  background-color: #ffffff40;
+  outline: 1px solid #000000;
+}
+
+.container.dark {
+  background-color: #000000;
+  outline: 1px solid #ffffff;
+}
+
 .image {
   width: 36px;
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image.light {
+  filter: invert(1);
 }
 
 .title {

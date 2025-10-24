@@ -17,6 +17,13 @@
 
 .description {
   font-size: 14px;
+}
+
+.description.light {
+  color: #606060;
+}
+
+.description.dark {
   color: #949494;
 }
 

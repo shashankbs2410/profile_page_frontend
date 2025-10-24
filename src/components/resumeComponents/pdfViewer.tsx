@@ -57,7 +57,7 @@ const PdfReact = (props: PdfProps) => {
               pageIndex={pageNumber}
               pageNumber={page}
               className={classes.pdf_document}
-              canvasBackground="#242424"
+              canvasBackground={mode === "dark" ? "#242424" : "#24242440"}
               renderTextLayer={false}
               renderAnnotationLayer={false}
             />

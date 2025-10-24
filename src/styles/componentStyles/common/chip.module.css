@@ -1,9 +1,17 @@
 .chip_container {
   padding: 5px;
   border-radius: 3px;
-  color: #ffffff;
+
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
   width: fit-content;
   margin: 4px 5px 2px 0px;
+}
+
+.chip_container.light {
+  color: #000000;
+}
+
+.chip_container.dark {
+  color: #ffffff;
 }

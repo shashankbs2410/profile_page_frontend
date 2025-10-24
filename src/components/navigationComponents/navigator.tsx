@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { pages } from "./navigatorConstants";
-import classes from "./navigator.module.css";
+import classes from "../../styles/componentStyles/navigationComponents/navigator.module.css";
 import moon from "../../assets/icon_moon_black.png";
 import sun from "../../assets/icon_sun_white.png";
 import { setMode } from "../../store/slices/containerSlice";

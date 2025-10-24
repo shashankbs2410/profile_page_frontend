@@ -32,7 +32,7 @@ const PaginationComponent = (props: {
                 (selectedPage - 1) * props.itemcount,
                 selectedPage * props.itemcount
               )
-              .map((project) => props.mapComponent(project))}
+              .map((project) => props.mapComponent({...project, mode: mode}))}
         </div>
         <div className={classes.buffer}>
           {props.data.length > 0 &&
@@ -53,7 +53,7 @@ const PaginationComponent = (props: {
               key={`page-${index}`}
               className={`${classes.page_dot} ${
                 selectedPage === index + 1 ? classes.selected : undefined
-              }`}
+              } ${classes[mode]}`}
             />
           ))}
       </div>

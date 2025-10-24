@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  outline: 1px solid #d1d1d1;
   outline-offset: -5px;
   box-shadow: 5px 5px 5px 5px #00000066;
 }
@@ -23,6 +22,7 @@
 .reset_button.dark {
   background-color: transparent;
   color: #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .message_box input.dark,
@@ -32,23 +32,19 @@
 }
 
 .message_box.light,
-.reset_button.light,
+.reset_button.light {
+  background-color: #ffffff40;
+  color: #000000;
+  outline: 1px solid #000000;
+}
+
 .message_box input.light,
 .message_box textarea.light {
-  background-color: #0e233033;
+  background-color: #24242440;
   color: #000000;
 }
 
 .reset_button.light {
-  filter: brightness(0);
-}
-
-.send_button.dark {
-  background-color: #0078d7;
-}
-
-.send_button.light {
-  background-color: #0e233066;
   filter: brightness(0);
 }
 
@@ -78,13 +74,17 @@
 
 .send_button {
   border: #ffffff 1px solid;
-  background-color: #0078d733;
+  background-color: #0078d7;
 }
 
 .reset_button:hover,
 .send_button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.send_button_icon.light {
+  filter: brightness(0);
 }
 
 .send_button_content {
@@ -164,7 +164,7 @@
 }
 
 .message_input_container textarea.light::-webkit-scrollbar-thumb {
-  background-color: #0e233066;
+  background-color: #ffffff40;
 }
 
 .send_button.disabled {

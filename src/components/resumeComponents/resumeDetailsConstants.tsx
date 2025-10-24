@@ -65,5 +65,4 @@ export const skills = [
   { title: "Postman", img: postmanLogo },
   { title: "SQL", img: sqlLogo },
   { title: "Python", img: pythonLogo },
-  { title: "MongoDB", img: mongodbLogo },
 ];

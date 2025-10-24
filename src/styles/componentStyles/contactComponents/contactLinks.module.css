@@ -14,8 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid #d1d1d1;
-  /* outline-offset: -5px; */
+  outline-offset: -5px;
   box-shadow: 5px 5px 5px 5px #00000066;
 }
 
@@ -26,23 +25,22 @@
 .link_icon.dark,
 .email.dark {
   background-color: transparent;
-  filter: brightness(1);
-}
-
-.mail_icon.dark {
-  background-color: #111112;
+  outline: 1px solid #ffffff;
 }
 
 .link_icon.light,
-.email.light,
-.mail_icon.light {
-  background-color: #0e233033;
-  filter: brightness(0);
+.email.light {
+  background-color: #ffffff40;
+  outline: 1px solid #000000;
 }
 
 .icon {
   width: 36px;
   height: 36px;
+}
+
+.icon.light {
+  filter: brightness(0);
 }
 
 .email {
@@ -54,7 +52,6 @@
   height: 70px;
   border-radius: 35px;
   width: 75%;
-  outline: 1px solid #d1d1d1;
   outline-offset: -5px;
   box-shadow: 5px 5px 5px 5px #00000066;
 }
@@ -82,15 +79,16 @@
   gap: 5px;
 }
 
-.mail_icon:hover {
-  cursor: pointer;
+.mail_icon.dark {
+  background-color: #111112;
 }
 
-.link_icons_container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 75%;
+.mail_icon.light {
+  background-color: #24242440;
+}
+
+.mail_icon:hover {
+  cursor: pointer;
 }
 
 .mail_icon.copied {
@@ -102,8 +100,20 @@
   opacity: 0.8;
 }
 
+.link_icons_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
 .copied_text {
   animation: copy_text_expand 0.3s ease-in;
+}
+
+.mail_to_icon.light,
+.copy_icon.light {
+  filter: brightness(0);
 }
 
 @keyframes expand_copy {

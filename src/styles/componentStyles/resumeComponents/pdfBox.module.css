@@ -7,9 +7,17 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
-  outline: 1px solid #d9d9d9;
+
   outline-offset: -5px;
   padding: 5px;
+}
+
+.pdf_container.light {
+  outline: 1px solid #000000;
+}
+
+.pdf_container.dark {
+  outline: 1px solid #ffffff;
 }
 
 .pdf_buttons {
@@ -27,6 +35,10 @@
   gap: 5px;
 }
 
+.pdf_buttons.light {
+  background-color: #24242440;
+}
+
 .page_change_button,
 .zoom_in_out_button {
   background: none;
@@ -34,7 +46,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
 }
 
 .page_change_button:hover,
@@ -48,6 +59,11 @@
   width: 16px;
 }
 
+.button_img.light {
+  filter: brightness(0);
+}
+
+
 .zoom_percentage {
   width: 50px;
   text-align: center;
@@ -58,6 +74,10 @@
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+}
+
+.print_download_icons.light {
+  filter: brightness(0);
 }
 
 .print_download_icons a {

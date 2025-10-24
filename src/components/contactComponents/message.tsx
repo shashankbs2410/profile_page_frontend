@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
-import classes from "./message.module.css";
+import classes from "../../styles/componentStyles/contactComponents/message.module.css";
 import resetIcon from "../../assets/icon_reset.png";
 import sendIcon from "../../assets/icon_send.png";
 import {
@@ -118,7 +118,10 @@ const MessageComponent = () => {
             {!sending && (
               <span className={classes.send_button_content}>
                 <span>Send</span>
-                <img src={sendIcon} />
+                <img
+                  src={sendIcon}
+                  className={`${classes.send_button_icon} ${classes[mode]}`}
+                />
               </span>
             )}
             {sending && <LoaderComponent />}

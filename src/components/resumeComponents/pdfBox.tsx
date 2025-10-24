@@ -17,6 +17,7 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
   const { pageNumber, numPages } = useSelector(
     (state: RootState) => state.resume
   );
+  const { mode } = useSelector((state: RootState) => state.container);
   const dispatch = useDispatch<AppDispatch>();
 
   function nextPage() {
@@ -44,7 +45,7 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
   }
 
   return (
-    <div className={classes.pdf_container}>
+    <div className={`${classes.pdf_container} ${classes[mode]}`}>
       <div className={classes.pdf_header}>
         <div className={classes.back}>
           <button
@@ -54,13 +55,16 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             {"< Back"}
           </button>
         </div>
-        <div className={classes.pdf_buttons}>
+        <div className={`${classes.pdf_buttons} ${classes[mode]}`}>
           <button
             onClick={prevPage}
             disabled={pageNumber <= 1}
             className={classes.page_change_button}
           >
-            <img src={leftSmallIcon} className={classes.button_img} />
+            <img
+              src={leftSmallIcon}
+              className={`${classes.button_img} ${classes[mode]}`}
+            />
           </button>
           <span>{`Page ${pageNumber} / ${numPages}`}</span>
           <button
@@ -68,7 +72,10 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             disabled={pageNumber >= (numPages ?? -1)}
             className={classes.page_change_button}
           >
-            <img src={rightSmallIcon} className={classes.button_img} />
+            <img
+              src={rightSmallIcon}
+              className={`${classes.button_img} ${classes[mode]}`}
+            />
           </button>
           |
           <button
@@ -76,7 +83,10 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             disabled={scale <= 0.75}
             className={classes.zoom_in_out_button}
           >
-            <img src={minusIcon} className={classes.button_img} />
+            <img
+              src={minusIcon}
+              className={`${classes.button_img} ${classes[mode]}`}
+            />
           </button>
           <span className={classes.zoom_percentage}>{`${(scale * 100).toFixed(
             0
@@ -86,10 +96,13 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             disabled={scale >= 1.95}
             className={classes.zoom_in_out_button}
           >
-            <img src={plusIcon} className={classes.button_img} />
+            <img
+              src={plusIcon}
+              className={`${classes.button_img} ${classes[mode]}`}
+            />
           </button>
         </div>
-        <div className={classes.print_download_icons}>
+        <div className={`${classes.print_download_icons} ${classes[mode]}`}>
           <img
             src={printIcon}
             onClick={() => window.open(props.src, "_blank")}

@@ -1,5 +1,5 @@
 import { contactLinks } from "./contactLinksConstants";
-import classes from "./contactLinks.module.css";
+import classes from "../../styles/componentStyles/contactComponents/contactLinks.module.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 
@@ -29,7 +29,12 @@ const ContactLinks = () => {
             href="mailto:shashankbs2410@gmail.com"
             className={`${classes.mail_icon} ${classes[mode]}`}
           >
-            <img src={mailIcon} title="mail to" alt="mail to" />
+            <img
+              src={mailIcon}
+              title="mail to"
+              alt="mail to"
+              className={`${classes.mail_to_icon} ${classes[mode]}`}
+            />
           </a>
           <a
             onClick={() => {
@@ -44,6 +49,7 @@ const ContactLinks = () => {
               src={copied ? tickIcon : copyIcon}
               title="copy mail to clipboard"
               alt="copy mail to clipboard"
+              className={`${classes.copy_icon} ${classes[mode]}`}
             />
             {copied && <div className={classes.copied_text}>Copied</div>}
           </a>
@@ -61,7 +67,7 @@ const ContactLinks = () => {
               title={link.name}
               alt={link.name}
               src={link.icon}
-              className={classes.icon}
+              className={`${classes.icon} ${classes[mode]}`}
             />
           </a>
         ))}
