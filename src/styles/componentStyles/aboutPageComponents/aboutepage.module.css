@@ -20,7 +20,7 @@
 }
 
 .photo_card_container.light {
-  background: #FFFFFF80;
+  background: #ffffff80;
 }
 
 .photo_card_container.dark {
@@ -31,9 +31,9 @@
   background: repeating-radial-gradient(
       circle at 0 0,
       transparent 0,
-      #FFFFFF80 10px
+      #ffffff80 10px
     ),
-    repeating-linear-gradient(#FFFFFF80, transparent);
+    repeating-linear-gradient(#ffffff80, transparent);
 }
 
 .photo_card_container.dark:hover {
@@ -90,15 +90,16 @@
   transform-style: preserve-3d;
   transition: transform 0.2s ease;
   border-radius: 20px;
-  transform: perspective(400px) rotateX(0deg) rotateY(10deg) scale(1.00) translate3d(0, 0, 0);
+  transform: perspective(400px) rotateX(0deg) rotateY(10deg) scale(1)
+    translate3d(0, 0, 0);
 }
 
-.photo_card.light  {
-outline: #000000 1px solid;
+.photo_card.light {
+  outline: #000000 1px solid;
 }
 
-.photo_card.dark  {
-outline: #FFFFFF 1px solid;
+.photo_card.dark {
+  outline: #ffffff 1px solid;
 }
 
 .photo {
@@ -129,4 +130,40 @@ outline: #FFFFFF 1px solid;
   font-size: 18px;
   line-height: 1.6;
   text-align: left;
+}
+
+.image {
+  width: 290px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .about_page_container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .about_me {
+    width: calc(100% - 40px);
+    margin-left: 0px;
+    padding: 20px;
+  }
+
+  .about_me_heading {
+    justify-content: center;
+  }
+
+  .about_me_text {
+    text-align: center;
+  }
+
+  .about_me_heading {
+    font-size: 24px;
+  }
+
+  .about_me_text {
+    font-size: 16px;
+  }
 }

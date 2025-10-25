@@ -32,7 +32,10 @@ const TimeLineComponent = (props: { data: timeLineData[] }) => {
       }}
     >
       {props.data.map((item, i) => (
-        <TimelineItem sx={{ height: `calc(100% / ${props.data.length})` }}>
+        <TimelineItem
+          key={item.title}
+          sx={{ height: `calc(100% / ${props.data.length})` }}
+        >
           <TimelineOppositeContent className={classes.time}>
             {item.time}
           </TimelineOppositeContent>

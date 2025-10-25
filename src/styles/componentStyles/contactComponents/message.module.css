@@ -176,3 +176,24 @@
   vertical-align: super;
   font-size: 10px;
 }
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .message_container {
+    width: 100%;
+  }
+
+  .message_box {
+    width: 90%;
+    height: 100%;
+  }
+
+  .email_mobile_container {
+    flex-direction: column;
+  }
+
+  .email_container,
+  .mobile_container {
+    width: 100%;
+  }
+}

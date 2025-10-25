@@ -136,3 +136,19 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .links_container {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .email {
+    width: 100%;
+  }
+
+  .link_icons_container{
+    width: 100%;
+  }
+}

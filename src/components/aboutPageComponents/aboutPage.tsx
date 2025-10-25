@@ -50,7 +50,7 @@ const AboutPageContainer: React.FC = () => {
           <div className={classes.photo}>
             <img
               src={profilePhoto}
-              style={{ width: "290px", borderRadius: "10px" }}
+              className={classes.image}
             />
           </div>
         </div>
