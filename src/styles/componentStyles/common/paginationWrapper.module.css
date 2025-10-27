@@ -44,7 +44,7 @@
   width: 14px;
   height: 14px;
   border-radius: 7px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .page_dot.selected.light {
@@ -52,7 +52,7 @@
 }
 
 .page_dot.selected.dark {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .items_container {
@@ -79,4 +79,16 @@
 
 .list_box.light {
   color: #000000;
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .list_box {
+    width: calc(100% - 40px);
+    gap: 1.5rem;
+  }
+
+  .items_container {
+    height: 18rem;
+  }
 }

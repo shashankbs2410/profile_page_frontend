@@ -34,3 +34,10 @@
 .dot {
   background-color: #0078d7 !important;
 }
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .container {
+    width: 100%;
+  }
+}

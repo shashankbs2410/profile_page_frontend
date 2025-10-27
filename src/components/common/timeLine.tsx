@@ -20,7 +20,9 @@ type timeLineData = {
 };
 
 const TimeLineComponent = (props: { data: timeLineData[] }) => {
-  const { mode } = useSelector((state: RootState) => state.container);
+  const { mode, screenWidth } = useSelector(
+    (state: RootState) => state.container
+  );
 
   return (
     <Timeline
@@ -34,7 +36,12 @@ const TimeLineComponent = (props: { data: timeLineData[] }) => {
       {props.data.map((item, i) => (
         <TimelineItem
           key={item.title}
-          sx={{ height: `calc(100% / ${props.data.length})` }}
+          sx={{
+            height:
+              screenWidth < 768
+                ? "fit-content"
+                : `calc(100% / ${props.data.length})`,
+          }}
         >
           <TimelineOppositeContent className={classes.time}>
             {item.time}

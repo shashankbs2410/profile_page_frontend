@@ -6,7 +6,10 @@ const SkillCardComponent = (props: {
   mode: "dark" | "light";
 }) => {
   return (
-    <div className={`${classes.container} ${classes[props.mode]}`}>
+    <div
+      className={`${classes.container} ${classes[props.mode]}`}
+      key={props.title}
+    >
       <img
         src={props.img}
         alt={props.title}

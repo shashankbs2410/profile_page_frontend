@@ -96,3 +96,31 @@
 .pdf_icon.light {
   filter: brightness(0);
 }
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .container {
+    flex-direction: column;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+  }
+
+  .left_section {
+    width: 100%;
+    padding: 0px;
+    height: auto;
+  }
+
+  .right_section {
+    width: 100%;
+    padding: 0px;
+    height: auto;
+    margin: 0px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
