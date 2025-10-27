@@ -17,7 +17,9 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
   const { pageNumber, numPages } = useSelector(
     (state: RootState) => state.resume
   );
-  const { mode } = useSelector((state: RootState) => state.container);
+  const { mode, screenWidth } = useSelector(
+    (state: RootState) => state.container
+  );
   const dispatch = useDispatch<AppDispatch>();
 
   function nextPage() {
@@ -44,6 +46,56 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
     dispatch(setNumPages(numPages));
   }
 
+  const pdfButtonOptions = (
+    <div className={`${classes.pdf_buttons} ${classes[mode]}`}>
+      <button
+        onClick={prevPage}
+        disabled={pageNumber <= 1}
+        className={classes.page_change_button}
+      >
+        <img
+          src={leftSmallIcon}
+          className={`${classes.button_img} ${classes[mode]}`}
+        />
+      </button>
+      <span>{`Page ${pageNumber} / ${numPages}`}</span>
+      <button
+        onClick={nextPage}
+        disabled={pageNumber >= (numPages ?? -1)}
+        className={classes.page_change_button}
+      >
+        <img
+          src={rightSmallIcon}
+          className={`${classes.button_img} ${classes[mode]}`}
+        />
+      </button>
+      |
+      <button
+        onClick={() => setScale(scale - 0.2)}
+        disabled={scale <= 0.75}
+        className={classes.zoom_in_out_button}
+      >
+        <img
+          src={minusIcon}
+          className={`${classes.button_img} ${classes[mode]}`}
+        />
+      </button>
+      <span className={classes.zoom_percentage}>{`${(scale * 100).toFixed(
+        0
+      )}%`}</span>
+      <button
+        onClick={() => setScale(scale + 0.2)}
+        disabled={scale >= 1.95}
+        className={classes.zoom_in_out_button}
+      >
+        <img
+          src={plusIcon}
+          className={`${classes.button_img} ${classes[mode]}`}
+        />
+      </button>
+    </div>
+  );
+
   return (
     <div className={`${classes.pdf_container} ${classes[mode]}`}>
       <div className={classes.pdf_header}>
@@ -55,53 +107,7 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             {"< Back"}
           </button>
         </div>
-        <div className={`${classes.pdf_buttons} ${classes[mode]}`}>
-          <button
-            onClick={prevPage}
-            disabled={pageNumber <= 1}
-            className={classes.page_change_button}
-          >
-            <img
-              src={leftSmallIcon}
-              className={`${classes.button_img} ${classes[mode]}`}
-            />
-          </button>
-          <span>{`Page ${pageNumber} / ${numPages}`}</span>
-          <button
-            onClick={nextPage}
-            disabled={pageNumber >= (numPages ?? -1)}
-            className={classes.page_change_button}
-          >
-            <img
-              src={rightSmallIcon}
-              className={`${classes.button_img} ${classes[mode]}`}
-            />
-          </button>
-          |
-          <button
-            onClick={() => setScale(scale - 0.2)}
-            disabled={scale <= 0.75}
-            className={classes.zoom_in_out_button}
-          >
-            <img
-              src={minusIcon}
-              className={`${classes.button_img} ${classes[mode]}`}
-            />
-          </button>
-          <span className={classes.zoom_percentage}>{`${(scale * 100).toFixed(
-            0
-          )}%`}</span>
-          <button
-            onClick={() => setScale(scale + 0.2)}
-            disabled={scale >= 1.95}
-            className={classes.zoom_in_out_button}
-          >
-            <img
-              src={plusIcon}
-              className={`${classes.button_img} ${classes[mode]}`}
-            />
-          </button>
-        </div>
+        {screenWidth > 768 && pdfButtonOptions}
         <div className={`${classes.print_download_icons} ${classes[mode]}`}>
           <img
             src={printIcon}
@@ -111,6 +117,7 @@ const PdfBox = (props: { src: string; backClickHandler: any }) => {
             <img src={downloadIcon} />
           </a>
         </div>
+        {screenWidth < 768 && pdfButtonOptions}
       </div>
       <PdfReact
         src={props.src}

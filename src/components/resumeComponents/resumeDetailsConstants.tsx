@@ -13,7 +13,6 @@ import cssLogo from "../../assets/logo_css.png";
 import postmanLogo from "../../assets/logo_postman.png";
 import sqlLogo from "../../assets/logo_sql.png";
 import pythonLogo from "../../assets/logo_python.png";
-import mongodbLogo from "../../assets/logo_mongodb.png";
 
 export const careerData = [
   {

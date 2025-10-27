@@ -28,7 +28,7 @@
 }
 
 .pdf_window.light::-webkit-scrollbar-track {
-  background-color: #ffffffCC;
+  background-color: #ffffffcc;
 }
 
 .pdf_window::-webkit-scrollbar-thumb {
@@ -39,4 +39,15 @@
 
 .pdf_window::-webkit-scrollbar-corner {
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .pdf_document {
+    padding: 5px;
+  }
+
+  .pdf_window {
+    width: 98%;
+  }
 }
