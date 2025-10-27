@@ -85,10 +85,6 @@
   /* Mobile-specific styles */
   .list_box {
     width: calc(100% - 40px);
-    gap: 1.5rem;
-  }
-
-  .items_container {
-    height: 18rem;
+    gap: 2.5rem;
   }
 }

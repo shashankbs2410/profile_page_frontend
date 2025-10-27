@@ -118,9 +118,14 @@
     padding: 0px;
     height: auto;
     margin: 0px;
+    gap: 3rem;
   }
 
   .divider {
     display: none;
+  }
+
+  .ts_container {
+    height: 19rem;
   }
 }

@@ -41,7 +41,7 @@
 @media (max-width: 767px) {
   /* Mobile-specific styles */
   .container {
-    height: 8rem;
+    height: 7rem;
   }
 
   .title {
