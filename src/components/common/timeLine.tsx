@@ -8,6 +8,8 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 type timeLineData = {
   key: string;
@@ -18,6 +20,10 @@ type timeLineData = {
 };
 
 const TimeLineComponent = (props: { data: timeLineData[] }) => {
+  const { mode, screenWidth } = useSelector(
+    (state: RootState) => state.container
+  );
+
   return (
     <Timeline
       className={classes.container}
@@ -28,7 +34,15 @@ const TimeLineComponent = (props: { data: timeLineData[] }) => {
       }}
     >
       {props.data.map((item, i) => (
-        <TimelineItem sx={{ height: `calc(100% / ${props.data.length})` }}>
+        <TimelineItem
+          key={item.title}
+          sx={{
+            height:
+              screenWidth < 768
+                ? "fit-content"
+                : `calc(100% / ${props.data.length})`,
+          }}
+        >
           <TimelineOppositeContent className={classes.time}>
             {item.time}
           </TimelineOppositeContent>
@@ -43,7 +57,9 @@ const TimeLineComponent = (props: { data: timeLineData[] }) => {
             {item.subTitle && (
               <div className={classes.sub_title}>{item.subTitle}</div>
             )}
-            <div className={classes.description}>{item.description}</div>
+            <div className={`${classes.description} ${classes[mode]}`}>
+              {item.description}
+            </div>
           </TimelineContent>
         </TimelineItem>
       ))}

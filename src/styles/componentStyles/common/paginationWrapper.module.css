@@ -30,13 +30,28 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
+}
+
+.page_dot.dark {
   background-color: #ffffff33;
+}
+
+.page_dot.light {
+  background-color: #00000033;
 }
 
 .page_dot.selected {
   width: 14px;
   height: 14px;
   border-radius: 7px;
+  background-color: #ffffff;
+}
+
+.page_dot.selected.light {
+  background-color: #000000;
+}
+
+.page_dot.selected.dark {
   background-color: #ffffff;
 }
 
@@ -64,4 +79,12 @@
 
 .list_box.light {
   color: #000000;
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .list_box {
+    width: calc(100% - 40px);
+    gap: 2.5rem;
+  }
 }

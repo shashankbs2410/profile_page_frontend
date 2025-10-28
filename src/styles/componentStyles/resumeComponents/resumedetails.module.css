@@ -11,6 +11,13 @@
 .divider {
   width: 1px;
   height: 75%;
+}
+
+.divider.light {
+  background-color: #000000;
+}
+
+.divider.dark {
   background-color: #ffffff;
 }
 
@@ -28,7 +35,7 @@
 .right_section {
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
   width: calc(40% - 30px);
@@ -57,8 +64,8 @@
 
 .pdf_open_button {
   all: unset;
-  height: 50px;
-  width: 300px;
+  height: 60px;
+  width: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,20 +74,58 @@
   padding: 0;
   color: inherit;
   font-family: inherit;
-  border: #ffffff 1px solid;
+  outline-offset: -5px;
   background-color: #0078d733;
 }
 
 .pdf_open_button.dark {
   background-color: #0078d7;
+  outline: #ffffff 1px solid;
 }
 
 .pdf_open_button.light {
-  background-color: #0e233066;
-  filter: brightness(0);
+  background-color: #ffffff40;
+  outline: #000000 1px solid;
 }
 
 .pdf_open_button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.pdf_icon.light {
+  filter: brightness(0);
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .container {
+    flex-direction: column;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+  }
+
+  .left_section {
+    width: 100%;
+    padding: 0px;
+    height: auto;
+  }
+
+  .right_section {
+    width: 100%;
+    padding: 0px;
+    height: auto;
+    margin: 0px;
+    gap: 3rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .ts_container {
+    height: 19rem;
+  }
 }

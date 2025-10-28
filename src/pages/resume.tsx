@@ -30,7 +30,7 @@ const ResumePage = () => {
       )}
       {viewPDF && (
         <PdfBox
-          src="/src/assets/Resume_Shashank.pdf"
+          src="/Resume_Shashank.pdf"
           backClickHandler={handleClosePDFClick}
         />
       )}

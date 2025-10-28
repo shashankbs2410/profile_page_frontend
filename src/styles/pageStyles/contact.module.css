@@ -5,3 +5,11 @@
   height: calc(100% - 140px);
   padding: 20px;
 }
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .contact_container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}

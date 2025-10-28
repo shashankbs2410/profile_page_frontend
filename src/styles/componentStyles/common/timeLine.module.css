@@ -17,6 +17,13 @@
 
 .description {
   font-size: 14px;
+}
+
+.description.light {
+  color: #606060;
+}
+
+.description.dark {
   color: #949494;
 }
 
@@ -26,4 +33,11 @@
 
 .dot {
   background-color: #0078d7 !important;
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .container {
+    width: 100%;
+  }
 }

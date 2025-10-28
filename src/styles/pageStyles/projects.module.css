@@ -6,3 +6,9 @@
   padding: 20px;
 }
 
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .projects_container {
+    padding: 0px;
+  }
+}

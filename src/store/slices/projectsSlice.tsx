@@ -1,21 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { CardDetailstype } from "../../components/common/card";
 
-export const fetchProjects = createAsyncThunk(
-  "data/fetchData",
-  async (_, { rejectWithValue }) => {
-    try {
-      const response = await fetch(`https://profile-page-backend-neon.vercel.app/projects`);
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await response.json();
-      return data;
-    } catch (error: any) {
-      return rejectWithValue(error.message);
-    }
+export const fetchProjects = createAsyncThunk("data/fetchData", async () => {
+  const response = await fetch(
+    `https://profile-page-backend-plum.vercel.app/projects`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
   }
-);
+  const data = await response.json();
+  return data;
+});
 
 type initialStateType = {
   projectsList: CardDetailstype[];

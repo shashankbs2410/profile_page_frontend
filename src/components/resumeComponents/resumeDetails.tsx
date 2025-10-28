@@ -11,11 +11,11 @@ const ResumeDetailsComponent = (props: { pdfViewOpenFunction: any }) => {
   const { mode } = useSelector((state: RootState) => state.container);
 
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container} ${classes[mode]}`}>
       <div className={classes.left_section}>
         <TimeLineComponent data={careerData} />
       </div>
-      <div className={classes.divider} />
+      <div className={`${classes.divider} ${classes[mode]}`} />
       <div className={classes.right_section}>
         <div className={classes.tech_stack}>
           <span className={classes.ts_title}>TECHNICAL SKILLS</span>
@@ -32,7 +32,11 @@ const ResumeDetailsComponent = (props: { pdfViewOpenFunction: any }) => {
           onClick={props.pdfViewOpenFunction}
         >
           Open PDF View
-          <img src={pdfImage} alt="PDF View" />
+          <img
+            src={pdfImage}
+            alt="PDF View"
+            className={`${classes.pdf_icon} ${classes[mode]}`}
+          />
         </button>
       </div>
     </div>

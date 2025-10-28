@@ -11,7 +11,11 @@
 }
 
 .app.light {
-  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(148, 201, 236, 0.5) 100%);;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(148, 201, 236, 0.5) 100%
+  );
   color: #000000;
   font-family: "Source Code Pro", monospace;
 }
@@ -78,5 +82,45 @@
   }
   100% {
     bottom: -410px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+
+  .background1 {
+    left: 0;
+    top: 0;
+    animation: bg1_animation_mobile 15s ease-in-out infinite;
+  }
+
+  .background2 {
+    right: 0;
+    bottom: 0;
+    animation: bg2_animation_mobile 20s ease-in-out infinite;
+  }
+
+  @keyframes bg1_animation_mobile {
+    0% {
+      left: -360px;
+    }
+    50% {
+      left: -150px;
+    }
+    100% {
+      left: -360px;
+    }
+  }
+
+  @keyframes bg2_animation_mobile {
+    0% {
+      right: -360px;
+    }
+    50% {
+      right: -730px;
+    }
+    100% {
+      right: -360px;
+    }
   }
 }

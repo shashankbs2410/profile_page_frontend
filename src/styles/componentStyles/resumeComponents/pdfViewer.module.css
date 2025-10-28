@@ -19,24 +19,35 @@
 }
 
 .pdf_window::-webkit-scrollbar-track {
-  background-color: #ffffff33;
   border-radius: 5px;
   margin: 10px 10px;
+}
+
+.pdf_window.dark::-webkit-scrollbar-track {
+  background-color: #ffffff33;
+}
+
+.pdf_window.light::-webkit-scrollbar-track {
+  background-color: #ffffffcc;
 }
 
 .pdf_window::-webkit-scrollbar-thumb {
   border-radius: 5px;
   cursor: pointer;
+  background-color: #0078d7;
 }
 
 .pdf_window::-webkit-scrollbar-corner {
   overflow: hidden;
 }
 
-.pdf_window.dark::-webkit-scrollbar-thumb {
-  background-color: #0078d7;
-}
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  .pdf_document {
+    padding: 5px;
+  }
 
-.pdf_window.light::-webkit-scrollbar-thumb {
-  background-color: #0e233066;
+  .pdf_window {
+    width: 98%;
+  }
 }

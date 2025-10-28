@@ -7,7 +7,8 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import Container from "./pages/container";
 import { pdfjs } from "react-pdf";
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
+import { setWindowHeight, setWindowWidth } from "./store/slices/containerSlice";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -17,6 +18,19 @@ const ProjectsPage = lazy(() => import("./pages/projects"));
 const ContactPage = lazy(() => import("./pages/contact"));
 
 function App() {
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth, window.innerHeight]);
+
   const router = createBrowserRouter([
     {
       path: "/",

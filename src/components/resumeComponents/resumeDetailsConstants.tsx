@@ -10,9 +10,9 @@ import springbootLogo from "../../assets/logo_springboot.png";
 import javaLogo from "../../assets/logo_java.png";
 import htmlLogo from "../../assets/logo_html.png";
 import cssLogo from "../../assets/logo_css.png";
+import postmanLogo from "../../assets/logo_postman.png";
 import sqlLogo from "../../assets/logo_sql.png";
 import pythonLogo from "../../assets/logo_python.png";
-import mongodbLogo from "../../assets/logo_mongodb.png";
 
 export const careerData = [
   {
@@ -61,7 +61,7 @@ export const skills = [
   { title: "Java", img: javaLogo },
   { title: "Html", img: htmlLogo },
   { title: "CSS", img: cssLogo },
+  { title: "Postman", img: postmanLogo },
   { title: "SQL", img: sqlLogo },
   { title: "Python", img: pythonLogo },
-  { title: "MongoDB", img: mongodbLogo },
 ];
