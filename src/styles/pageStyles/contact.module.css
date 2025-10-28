@@ -11,5 +11,6 @@
   .contact_container {
     flex-direction: column;
     margin-top: 10px;
+    overflow-y: auto;
   }
 }

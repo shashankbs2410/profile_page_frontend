@@ -4,8 +4,8 @@ export const pages: { page: string; path: string }[] = [
     path: "about",
   },
   {
-    page: "Resume",
-    path: "resume",
+    page: "Experience",
+    path: "experience",
   },
   {
     page: "Projects",
