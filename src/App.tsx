@@ -10,10 +10,7 @@ import { pdfjs } from "react-pdf";
 import { lazy, useEffect } from "react";
 import { setWindowHeight, setWindowWidth } from "./store/slices/containerSlice";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const AboutPage = lazy(() => import("./pages/about"));
 const ResumePage = lazy(() => import("./pages/resume"));
