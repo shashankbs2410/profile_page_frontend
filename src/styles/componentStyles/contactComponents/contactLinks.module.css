@@ -91,11 +91,6 @@
   cursor: pointer;
 }
 
-.mail_icon.copied {
-  width: 100px;
-  animation: expand_copy 0.3s ease-in;
-}
-
 .mail_icon:hover {
   opacity: 0.8;
 }
@@ -114,15 +109,6 @@
 .mail_to_icon.light,
 .copy_icon.light {
   filter: brightness(0);
-}
-
-@keyframes expand_copy {
-  0% {
-    width: 40px;
-  }
-  100% {
-    width: 100px;
-  }
 }
 
 @keyframes copy_text_expand {

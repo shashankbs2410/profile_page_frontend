@@ -7,6 +7,7 @@ import mailIcon from "../../assets/icon_mail.png";
 import copyIcon from "../../assets/icon_copy.png";
 import tickIcon from "../../assets/icon_tick.png";
 import React, { useEffect, useState } from "react";
+import PopperComponent from "../common/popper";
 
 const ContactLinks = () => {
   const { mode } = useSelector((state: RootState) => state.container);
@@ -16,12 +17,15 @@ const ContactLinks = () => {
     if (copied === true) {
       setTimeout(() => {
         setCopied(false);
-      }, 3000);
+      }, 4000);
     }
   }, [copied]);
 
   return (
     <div className={classes.links_container}>
+      {copied && (
+        <PopperComponent color={"#0078d780"} text={"Copied to clipboard"} />
+      )}
       <div className={`${classes.email} ${classes[mode]}`}>
         <span className={classes.email_text}>shashankbs2410@gmail.com</span>
         <span className={classes.email_icons_container}>
@@ -41,9 +45,7 @@ const ContactLinks = () => {
               navigator.clipboard.writeText("shashankbs2410@gmail.com");
               setCopied(true);
             }}
-            className={`${classes.mail_icon} ${classes[mode]} ${
-              copied && classes.copied
-            }`}
+            className={`${classes.mail_icon} ${classes[mode]}`}
           >
             <img
               src={copied ? tickIcon : copyIcon}
@@ -51,7 +53,6 @@ const ContactLinks = () => {
               alt="copy mail to clipboard"
               className={`${classes.copy_icon} ${classes[mode]}`}
             />
-            {copied && <div className={classes.copied_text}>Copied</div>}
           </a>
         </span>
       </div>

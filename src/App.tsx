@@ -10,9 +10,11 @@ import { pdfjs } from "react-pdf";
 import { lazy, useEffect } from "react";
 import { setWindowHeight, setWindowWidth } from "./store/slices/containerSlice";
 
-pdfjs.GlobalWorkerOptions.workerSrc="/pdf.worker.min.js";
+// production configuration
+// pdfjs.GlobalWorkerOptions.workerSrc="/pdf.worker.min.js";
 
-// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// dev configuration
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const AboutPage = lazy(() => import("./pages/about"));
 const ResumePage = lazy(() => import("./pages/resume"));
@@ -40,7 +42,7 @@ function App() {
       children: [
         { element: <Navigate to="about" />, index: true },
         { path: "about", element: <AboutPage /> },
-        { path: "resume", element: <ResumePage /> },
+        { path: "experience", element: <ResumePage /> },
         { path: "projects", element: <ProjectsPage /> },
         { path: "contact", element: <ContactPage /> },
       ],
