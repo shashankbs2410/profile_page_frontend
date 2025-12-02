@@ -12,7 +12,7 @@ export const pages: { page: string; path: string }[] = [
     path: "projects",
   },
   {
-    page: "Cotact",
+    page: "Contact",
     path: "contact",
   },
 ];
